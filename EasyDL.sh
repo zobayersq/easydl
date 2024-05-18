@@ -93,26 +93,26 @@ do
                     case $resource_dl_option in
                         $resource_opt1 )
                             case $quality_option in
-                                q_opt1 )
+                                $q_opt1 )
                                     yt-dlp -f best $url ;;
-                                q_opt2 )
+                                $q_opt2 )
                                     yt-dlp -f "best[height<=1080]" $url ;;
-                                q_opt3 )
+                                $q_opt3 )
                                     yt-dlp -f "best[height<=720]"  $url ;;
-                                q_opt4 )
+                                $q_opt4 )
                                     yt-dlp -f bestaudio  $url ;;
 
                             esac
                                     ;;
                         $resource_opt2 )
                             case $quality_option in
-                                q_opt1 )
+                                $q_opt1 )
                                     yt-dlp -f best  -o '%(playlist)s by %(uploader)s' $url ;;
-                                q_opt2 )
+                                $q_opt2 )
                                     yt-dlp -f "best[height<=1080]" -o '%(playlist)s by %(uploader)s' $url ;;
-                                q_opt3 )
+                                $q_opt3 )
                                     yt-dlp -f "best[height<=720]" -o '%(playlist)s by %(uploader)s'  $url ;;
-                                q_opt4 )
+                                $q_opt4 )
                                     yt-dlp -f bestaudio  -o '%(playlist)s by %(uploader)s' $url ;;
 
                             esac
@@ -120,13 +120,13 @@ do
                             ;;
                         $resource_opt3 )
                             case $quality_option in
-                                q_opt1 )
+                                $q_opt1 )
                                     yt-dlp -f best --embed-thumbnail --embed-metadata --download-archive chennel.txt $url -o '%(channel)s/%(title)s.%(ext)s' ;;
-                                q_opt2 )
+                                $q_opt2 )
                                     yt-dlp -f "best[height<=1080]" --embed-thumbnail --embed-metadata --download-archive chennel.txt $url -o '%(channel)s/%(title)s.%(ext)s' ;;
-                                q_opt3 )
+                                $q_opt3 )
                                     yt-dlp -f "best[height<=720]" --embed-thumbnail --embed-metadata --download-archive chennel.txt $url -o '%(channel)s/%(title)s.%(ext)s' ;;
-                                q_opt4 )
+                                $q_opt4 )
                                     yt-dlp -f bestaudio --embed-thumbnail --embed-metadata --download-archive chennel.txt $url -o '%(channel)s/%(title)s.%(ext)s' ;;
 
                             esac
